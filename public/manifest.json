@@ -4,9 +4,9 @@
     "display": "standalone",
     "scope": "/",
     "start_url": "/",
-    "name": "왁튜브 뮤직",
-    "short_name": "왁튜브 뮤직",
-    "description": "왁튜브 뮤직",
+    "name": "WAKTUBE MUSIC",
+    "short_name": "WAKTUBE MUSIC",
+    "description": "WAKTUBE MUSIC",
     "icons": [
         {
           "src": "assets/icons/icon-72x72.png",
