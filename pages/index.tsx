@@ -49,7 +49,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>왁튜브 뮤직</title>
+        <title>WAKTUBE MUSIC</title>
         <meta name="description" content="왁튜브 뮤직" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#000000" />
