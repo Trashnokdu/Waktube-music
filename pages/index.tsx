@@ -53,7 +53,7 @@ export default function Home() {
         <meta name="description" content="왁튜브 뮤직" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#000000" />
-        <link rel="icon" href="./logo.svg"/>
+        <link rel="icon" href="./logo.png"/>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div style={{ display: "flex", maxWidth: "100vw"}}>
