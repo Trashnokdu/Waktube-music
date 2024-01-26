@@ -49,8 +49,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>왁타버스 차트</title>
-        <meta name="description" content="왁타버스차트" />
+        <title>왁튜브 뮤직</title>
+        <meta name="description" content="왁튜브 뮤직" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#000000" />
         <link rel="icon" href="./logo.svg"/>

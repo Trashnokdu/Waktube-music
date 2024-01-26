@@ -4,9 +4,9 @@
     "display": "standalone",
     "scope": "/",
     "start_url": "/",
-    "name": "왁타버스 차트",
-    "short_name": "왁타버스 차트",
-    "description": "왁타버스 차트",
+    "name": "왁튜브 뮤직",
+    "short_name": "왁튜브 뮤직",
+    "description": "왁튜브 뮤직",
     "icons": [
         {
           "src": "assets/icons/icon-72x72.png",
