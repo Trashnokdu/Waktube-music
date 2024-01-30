@@ -62,7 +62,7 @@ export default function Home() {
             <div className="top-buttons">
               <button onClick={() => setContent("hourly")} style={{boxShadow: content == "hourly" ? "inset 0 -2px 0 0 red" : "none", transition: "box-shadow 0.2s-in-out"}} className="sidebutton">시간</button>
               <button onClick={() => setContent("daily")} style={{boxShadow: content == "daily" ? "inset 0 -2px 0 0 red" : "none",transition: "box-shadow 0.2s ease-in-out"}} className="sidebutton">일간</button>
-              <button onClick={() => setContent("weekly")} style={{boxShadow: content == "weekly" ? "inset 0 -2px 0 0 red" : "none", transition: "box-shadow 0.2s ease-in-out"}} className="sidebutton">주간</button>
+              <button onClick={() => setContent("alltime")} style={{boxShadow: content == "weekly" ? "inset 0 -2px 0 0 red" : "none", transition: "box-shadow 0.2s ease-in-out"}} className="sidebutton">누적</button>
             </div>
             <div className="bottom-buttons">
               <button onClick={() => playTop50(nowSongs)} style={{backgroundColor: "red", borderRadius: "8px", display: "flex", justifyContent: "space-between", alignItems: "center"}} className="sidebutton">

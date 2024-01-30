@@ -4,7 +4,7 @@ var Redis = require('ioredis');
 var redis = new Redis({host: process.env.mysql_URL,  port: 6379,  password: process.env.mysql_PASSWORD})
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const value:string = await redis.get('chart_weekly');
+  const value:string = await redis.get('chart_alltime');
   const songsArray: string[][] = JSON.parse(value);
   const result = songsArray.map(song => {
     return {
