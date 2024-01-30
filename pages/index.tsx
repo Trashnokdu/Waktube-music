@@ -65,11 +65,11 @@ export default function Home() {
               <button onClick={() => setContent("alltime")} style={{boxShadow: content == "alltime" ? "inset 0 -2px 0 0 red" : "none", transition: "box-shadow 0.2s ease-in-out"}} className="sidebutton">누적</button>
             </div>
             <div className="bottom-buttons">
-              <button onClick={() => playTop50(nowSongs)} style={{backgroundColor: "red", borderRadius: "8px", display: "flex", justifyContent: "space-between", alignItems: "center"}} className="sidebutton">
+              <button onClick={() => playTop50(nowSongs)} style={{backgroundColor: "red", borderRadius: "8px", display: "flex", justifyContent: "space-between", alignItems: "center"}} className="playbutton">
                 <span style={{marginLeft: "8px"}} className="material-symbols-rounded">play_circle</span>
                 <span style={{marginRight: "8px", fontWeight: "500"}}>1~50</span>
               </button>
-              <button onClick={() => playTop100(nowSongs)} style={{backgroundColor: "red", borderRadius: "8px", display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "8px"}} className="sidebutton">
+              <button onClick={() => playTop100(nowSongs)} style={{backgroundColor: "red", borderRadius: "8px", display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "8px"}} className="playbutton">
                 <span style={{marginLeft: "8px"}} className="material-symbols-rounded">play_circle</span>
                 <span style={{marginRight: "8px", fontWeight: "500"}}>51~100</span>
               </button>
@@ -79,12 +79,12 @@ export default function Home() {
         <div className="marginpc">
         <div >
           <div className="play-buttons" style={{height: "86px"}}>
-            <div style={{display: 'flex', justifyContent: 'center', width: "100%", backgroundColor: "#1C1C1E", borderRadius: "16px 16px 0px 0px"}}>
-              <button onClick={() => playTop50(nowSongs)} style={{backgroundColor: "red", borderRadius: "8px", display: "flex", justifyContent: "space-between", alignItems: "center", marginLeft: "8px", marginTop: "8px"}} className="sidebutton">
+            <div style={{display: 'flex', justifyContent: 'center', width: "100%", borderRadius: "16px 16px 0px 0px"}} className="bottombar">
+              <button onClick={() => playTop50(nowSongs)} style={{backgroundColor: "red", borderRadius: "8px", display: "flex", justifyContent: "space-between", alignItems: "center", marginLeft: "8px", marginTop: "8px"}} className="playbutton">
                 <span style={{marginLeft: "8px"}} className="material-symbols-rounded">play_circle</span>
                 <span style={{marginRight: "8px", fontWeight: "500"}}>1~50</span>
               </button>
-              <button onClick={() => playTop100(nowSongs)} style={{backgroundColor: "red", borderRadius: "8px", display: "flex", justifyContent: "space-between", alignItems: "center", marginLeft: "6px", marginRight: "8px", marginTop: "8px"}} className="sidebutton">
+              <button onClick={() => playTop100(nowSongs)} style={{backgroundColor: "red", borderRadius: "8px", display: "flex", justifyContent: "space-between", alignItems: "center", marginLeft: "6px", marginRight: "8px", marginTop: "8px"}} className="playbutton">
                 <span style={{marginLeft: "8px"}} className="material-symbols-rounded">play_circle</span>
                 <span style={{marginRight: "8px", fontWeight: "500"}}>51~100</span>
               </button>
@@ -96,7 +96,7 @@ export default function Home() {
           <div key={i} className="flex">
             {loading ? <div></div> : [nowSongs[i], nowSongs[i+1]].map((item, j) => item && (
             <div key={j} className="main">
-                  <div style={{ display: "flex", alignItems: "center"}}>
+                  <div style={{ display: "flex", alignItems: "center", background: "none"}} >
                     <div style={{marginLeft:"17px", textAlign: "center"}}><p style={{minWidth: "3rem", maxWidth: "3rem"}}>{i+j+1}</p><p style={{color: "#B5B5B5", minWidth: "3rem", maxWidth: "3rem"}}>({item.rankChange})</p></div>
                     <img className="image-w" style={{marginLeft:"17px", textAlign: "center"}} src={`https://i.ytimg.com/vi/${item.id}/hqdefault.jpg`}></img>
                     <div className="auto-max" style={{marginLeft:"17px", textAlign: "left", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis"}}>
