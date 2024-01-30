@@ -20,7 +20,7 @@ export default function Document() {
         <noscript
           dangerouslySetInnerHTML={{
             __html: `
-            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-여기"
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWH3M6RM"
             height="0" width="0" style="display:none;visibility:hidden"></iframe>
             `,
           }}
