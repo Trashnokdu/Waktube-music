@@ -9,7 +9,9 @@
   flex-direction: column;
   justify-content: space-between;
 }
-
+.bottombar{
+  background-color: #1C1C1E;
+}
 .top-buttons {
   width: 100%;
 }
@@ -18,6 +20,17 @@
   margin: 8px;
 }
 .sidebutton{
+  text-align: center;
+  font-size: 0.875rem;
+  font-style: normal;
+  height: 3rem;
+  font-weight: 600;
+  width: 100%;
+  border: none;
+  background-color: black;
+  color: #fff
+}
+.playbutton{
   text-align: center;
   font-size: 0.875rem;
   font-style: normal;
@@ -130,6 +143,17 @@ a{
     border: none;
     color: #fff;
   }
+  .playbutton{
+    flex: 1;
+    margin: 0;   /* 필요에 따라 마진을 조절하실 수 있습니다 */
+    text-align: center;
+    font-size: 0.875rem;
+    font-style: normal;
+    width: 45vw;
+    font-weight: 600;
+    border: none;
+    color: #fff;
+  }
   .top-buttons {
     display: flex;
     justify-content: space-between;
@@ -165,5 +189,199 @@ a{
 @media (max-width: 359px) {
   .auto-max{
     width: 30vw;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .bottombar{
+    background-color: #F2F2F7;
+  }
+  .side {
+    top: 0;
+    width: 11.25rem;
+    height: 100svh;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .top-buttons {
+    width: 100%;
+  }
+  .bottom-buttons{
+    width: 100%;
+    margin: 8px;
+  }
+  .sidebutton{
+    text-align: center;
+    font-size: 0.875rem;
+    font-style: normal;
+    height: 3rem;
+    font-weight: 600;
+    width: 100%;
+    border: none;
+    background-color: #fff;
+    color: #000
+  }
+  .playbutton{
+    text-align: center;
+    font-size: 0.875rem;
+    font-style: normal;
+    height: 3rem;
+    font-weight: 600;
+    width: 100%;
+    border: none;
+    background-color: none;
+    color: #fff
+  }
+  :root{
+    background-color: white;
+    color: black;
+  }
+  body{
+    margin: 0;
+  }
+  p{
+    margin: 0;
+  }
+  *{
+    user-select: none;
+    box-sizing: border-box;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  }
+  a{
+    color: black;
+    text-decoration: none;
+  }
+  .image-w{
+    width: 6rem;
+  }
+  .main{
+    background-color: white;
+    color: black;
+    width: 60vw;
+    height: 8.888888888888889vh;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .auto-max{
+    width: 290px;
+  }
+  .marginpc{
+    margin-left: 13.5vw;
+    margin-top: 40px;
+  }
+  .play-buttons{
+    display: none;
+  }
+  @media (min-width: 1280px) {
+    .image-w{
+      width: 6rem;
+    }
+    .marginpc{
+      margin-left: 13.5vw;
+      margin-top: 40px;
+    }
+  .flex{
+    display: flex
+  }
+  .auto-max{
+    width: 43vw;
+  }
+  .main{
+    background-color: white;
+    color: black;
+    width: 31vw;
+    height: 8.888888888888889vh;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  }
+  @media (max-width: 599px) {
+    .top-buttons {
+      width: 60vw;
+    }
+    .image-w{
+      width: 6rem;
+      object-fit: cover;
+      height: 48px;
+      width: 48px;
+      border-radius: 8px;
+    }
+    .marginpc{
+      margin-left: 0vw;
+      margin-top: 60px;
+    }
+    .side {
+      top: 0;
+      width: 100vw;
+      height: 3rem;
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .sidebutton {
+      flex: 1;
+      margin: 0;   /* 필요에 따라 마진을 조절하실 수 있습니다 */
+      text-align: center;
+      font-size: 0.875rem;
+      font-style: normal;
+      width: 45vw;
+      font-weight: 600;
+      border: none;
+      color: #000;
+    }
+    .top-buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .playbutton{
+      flex: 1;
+      margin: 0;   /* 필요에 따라 마진을 조절하실 수 있습니다 */
+      text-align: center;
+      font-size: 0.875rem;
+      font-style: normal;
+      width: 45vw;
+      font-weight: 600;
+      border: none;
+      color: #fff;
+    }
+    .play-buttons{
+      margin: 0 auto;
+      width: 100vw;
+      position: fixed;
+      display: flex;
+      bottom: 0;
+      height: 4rem;
+      text-align: center;
+    }
+    .bottom-buttons{
+      display: none;
+    }
+    .auto-max{
+      width: 43vw;
+    }
+    .main{
+      background-color: white;
+      color: black;
+      width: 100vw;  /* 화면에 꽉 차게 만들기 위해 100vw로 설정 */
+      height: 5vh;
+      font-size: 0.875rem;
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  @media (max-width: 359px) {
+    .auto-max{
+      width: 30vw;
+    }
   }
 }
