@@ -60,7 +60,7 @@ export default function Home() {
         <nav className="side">
           <div className="side">
             <div className="top-buttons">
-              <button onClick={() => setContent("hourly")} style={{boxShadow: content == "hourly" ? "inset 0 -2px 0 0 red" : "none", transition: "box-shadow 0.2 ease-in-out"}} className="sidebutton">시간</button>
+              <button onClick={() => setContent("hourly")} style={{boxShadow: content == "hourly" ? "inset 0 -2px 0 0 red" : "none", transition: "box-shadow 0.2s ease-in-out"}} className="sidebutton">시간</button>
               <button onClick={() => setContent("daily")} style={{boxShadow: content == "daily" ? "inset 0 -2px 0 0 red" : "none",transition: "box-shadow 0.2s ease-in-out"}} className="sidebutton">일간</button>
               <button onClick={() => setContent("alltime")} style={{boxShadow: content == "alltime" ? "inset 0 -2px 0 0 red" : "none", transition: "box-shadow 0.2s ease-in-out"}} className="sidebutton">누적</button>
             </div>
