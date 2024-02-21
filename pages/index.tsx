@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useSearchParams } from "next/navigation";
 import React from "react";
 import { useEffect, useState } from "react";
 
@@ -33,19 +34,32 @@ export default function Home() {
   const [content, setContent] = useState("hourly");
   const [nowSongs, setNowSongs] = useState<songs[]>([]);
   const [loading, setLoading] = useState(true);
+  const [isgetparam, setIsgetparam] = useState(false)
+  const charttype = useSearchParams().get('type')
+  useEffect(() => {
+    if(charttype === "daily"){
+      setContent("daily");
+    }
+    else if(charttype === "alltime"){
+      setContent("alltime")
+    }
+    setIsgetparam(true);
+  }, [charttype])
 
   useEffect(() => {
-    setLoading(true);
-    fetch(`/api/chart/${content}`)
-    .then(response => response.json())
-    .then(data => {
-      setNowSongs(data);
-      setLoading(false);
-    })
-    .catch(error => {
-      setLoading(false);
-    })
-  }, [content])
+    if(isgetparam){
+      setLoading(true);
+      fetch(`/api/chart/${content}`)
+      .then(response => response.json())
+      .then(data => {
+        setNowSongs(data);
+        setLoading(false);
+      })
+      .catch(error => {
+        setLoading(false);
+      })
+    }
+  }, [content, isgetparam])
   return (
     <>
       <Head>
@@ -56,7 +70,7 @@ export default function Home() {
         <link rel="icon" href="./logo.png"/>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <div style={{ display: "flex", maxWidth: "100vw"}}>
+      <div className="no-select" style={{ display: "flex", maxWidth: "100vw"}}>
         <nav className="side">
           <div className="side">
             <div className="top-buttons">
